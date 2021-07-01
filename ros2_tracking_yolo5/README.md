@@ -62,6 +62,10 @@ then install all requirements in yolo5 requirements file
 
 python object_tracker_node_depth.py
 
+##### for depth estimation you can use zed2 camrea for high accuracy but if you do not have you can use the ros2 node in this link
+
+https://github.com/michaelhesham/Self-Driving-vehicles-course/tree/master/Graduation_project/monodepth2
+
 ## Acknowledgments
 * [yolov5 torch](https://github.com/ultralytics/yolov5)
 * [Yolov3 TensorFlow Amazing Implementation](https://github.com/zzh8829/yolov3-tf2)
