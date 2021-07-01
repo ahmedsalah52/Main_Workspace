@@ -58,6 +58,9 @@ conda create -n <env_name> python=3.8
 
 then install all requirements in yolo5 requirements file
 
+# to run 
+
+python object_tracker_node_depth.py
 
 ## Acknowledgments
 * [yolov5 torch](https://github.com/ultralytics/yolov5)
