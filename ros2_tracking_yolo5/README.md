@@ -3,11 +3,16 @@ This repository implements a ROS2 None contains YOLO5 Deep SORT in order to perf
 
 yolo3 and yolo5 were tested on this code, you can use any.
 
-#project pipeline
+# project pipeline:
+
 detection
 
 
 ![detection](gif/det.gif)
+
+
+
+
 
 
 tracking
@@ -16,16 +21,29 @@ tracking
 ![tracking](gif/tracking.gif)
 
 
+
+
+
+
+
 bird view using depth image
 
 
 ![bird view using depth image](gif/bird_view.gif)
 
 
+
+
+
+
 prediction
 
 
 ![prediction](gif/pred1.gif)
+
+
+
+
 
 
 prediction
