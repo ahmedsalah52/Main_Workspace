@@ -1,11 +1,11 @@
 # Object Tracking using YOLOv5, Deep Sort ,bird view using depth estimation and Prediction using UKF
-This repository implements a ROS2 Node contains YOLO5 Deep SORT in order to perfrom real-time object tracking. Yolov5 is an algorithm that uses deep convolutional neural networks to perform object detection. We can feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order for a real-time object tracker to be created. Then subscribe to a depth image from zed2 camera or any other depth estimation method to get the bird view then predict the motion of objects using UKF.
+This repository contains an implementation of a ROS2 Node that subscribes to a RGB image's topic and a depth image's topic, the node then uses YOLO5 and Deep SORT in order to perfrom a real-time object detection and tracking. then the detections are fed into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to track the objects using features matching and kalman filter. the node uses the detections in the RGB image and the depth image to calculate the detected objects' position in the bird's eye view where the motion is tracked and predicted using Unscented Kalman Filter (UKF).
 
-yolo3 and yolo5 were tested on this code, you can use any.
+yolo3 and yolo5 were tested on this code.
 
-## project pipeline:
+## The Project's Pipeline:
 
-### detection
+### Objects Detection
 
 
 ![detection](gif/det.gif)
@@ -15,7 +15,7 @@ yolo3 and yolo5 were tested on this code, you can use any.
 
 
 
-### tracking
+### Objects' Tracking
 
 
 ![tracking](gif/tracking.gif)
@@ -26,7 +26,7 @@ yolo3 and yolo5 were tested on this code, you can use any.
 
 
 
-### bird view using depth image
+### Object's Position Calculation in Bird's Eye View using the Depth Image
 
 
 ![bird view using depth image](gif/bird_view.gif)
@@ -36,7 +36,7 @@ yolo3 and yolo5 were tested on this code, you can use any.
 
 
 
-### prediction
+### Motion Prediction in the BEV
 
 
 ![prediction](gif/pred1.gif)
@@ -46,7 +46,7 @@ yolo3 and yolo5 were tested on this code, you can use any.
 
 
 
-### prediction
+### Motion Prediction 2 in the BEV
 
 
 ![prediction](gif/pred2.gif)
@@ -62,9 +62,7 @@ then install all requirements in yolo5 requirements file
 
 python object_tracker_node_depth.py
 
-##### for depth estimation you can use zed2 camrea for high accuracy but if you do not have you can use the ros2 node in this link
-
-https://github.com/michaelhesham/Self-Driving-vehicles-course/tree/master/Graduation_project/monodepth2
+##### for depth estimation you can use zed2 camrea for high accuracy but any other method can be used
 
 ## Acknowledgments
 * [yolov5 torch](https://github.com/ultralytics/yolov5)
